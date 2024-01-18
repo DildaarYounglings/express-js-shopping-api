@@ -87,3 +87,15 @@ app.post("/api/allCheckoutProducts",(req,res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
 });
+/*
+ add this to frontend in package.json file before scripts
+    "proxy":"http://localhost:3000/"
+*/
+/*
+ add this to frontend in vite.config.js file
+    server:{
+      proxy:{
+        '/api':'http://localhost:3000'
+      }
+    }
+*/
