@@ -4,6 +4,7 @@ const app = express();
 const port = 3000;
 // add CORS middleware //
 // routes and data //
+
 app.get("/", (req, res) => {
   res.send('<p style="background-color:black;color:white">Hello World!</p>');
 });
@@ -14,6 +15,7 @@ app.get("/api/products", (req, res) => {
       productCategory: "fruit",
       price: 10,
       quantity: 12,
+      content:"fresh, delicious,and potasium goodness",
       Comments: [
         { username: "dildaar", content: "they have great quality bananas" },
       ],
@@ -23,6 +25,7 @@ app.get("/api/products", (req, res) => {
       productCategory: "fruit",
       price: 5,
       quantity: 12,
+      content:"fresh, delicious,granny smith golden apples and a source of cyanide for people",
       Comments: [
         { username: "dildaar", content: "they have great quality apples" },
       ],
@@ -32,6 +35,7 @@ app.get("/api/products", (req, res) => {
       productCategory: "fruit",
       price: 15,
       quantity: 12,
+      content:"fresh, delicious,soft peaches and they're divine",
       Comments: [
         { username: "dildaar", content: "they have great quality peaches" },
       ],
@@ -41,6 +45,7 @@ app.get("/api/products", (req, res) => {
       productCategory: "fruit",
       price: 10,
       quantity: 12,
+      content:"fresh, delicious,soft pears get it before the other guy ",
       Comments: [
         { username: "dildaar", content: "they have great quality oranges" },
       ],
@@ -50,6 +55,7 @@ app.get("/api/products", (req, res) => {
       productCategory: "pear",
       price: 5,
       quantity: 12,
+      content:"fresh, delicious,and the practicaly the only fruit on this list that is a color",
       Comments: [
         { username: "dildaar", content: "they have great quality pears" },
       ],
@@ -59,6 +65,7 @@ app.get("/api/products", (req, res) => {
       productCategory: "fruit",
       price: 15,
       quantity: 12,
+      content:"fresh, delicious,strawberries, and a nice fruit in general that is or isn't used in strawberry flavoured products",
       Comments: [
         {
           username: "dildaar",
