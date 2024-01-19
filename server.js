@@ -1,6 +1,7 @@
 // initializing express js //
 const express = require("express");
 const path = require("path");
+const cors = require("cors")
 const app = express();
 const port = 3000;
 const allCheckoutProducts = [];
@@ -73,11 +74,10 @@ const allShopProducts = [
   },
 ];
 // add CORS middleware //
+app.use(cors());
 // routes and data //
-app.use(express.static("react-shopping-app"));
-
 app.get("/", (req, res) => {
-  res.send('<p style="background-color:black;color:white">Hello World!</p>');
+  res.send('<p style="background-color:black;color:white">This is Dildaars api and welcome to the backend of the react frontend!</p>');
 });
 app.get("/api/products", (req, res) => {
   res.send(allShopProducts);
