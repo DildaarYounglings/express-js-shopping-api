@@ -1,5 +1,6 @@
 // initializing express js //
 const express = require("express");
+const path = require("path");
 const app = express();
 const port = 3000;
 const allCheckoutProducts = [];
@@ -73,6 +74,7 @@ const allShopProducts = [
 ];
 // add CORS middleware //
 // routes and data //
+app.use(express.static("react-shopping-app"));
 
 app.get("/", (req, res) => {
   res.send('<p style="background-color:black;color:white">Hello World!</p>');
